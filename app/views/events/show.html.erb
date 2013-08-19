@@ -1,0 +1,20 @@
+<article>
+    <header>
+      <h2><%= @event.name %></h2>
+    </header>
+      <p>
+        <%= @event.description %>
+      </p>
+      <hr>
+      <strong>When:</strong>
+      <br>
+      <p><%= @event.starts_at %></p>
+      <hr>
+      <strong>Where: </strong>
+      <br>
+      <p><%= @event.location %></p>
+      <hr>
+      <strong>Price: </strong>
+      <br>
+      <p><%= format_price(@event) %></p>
+</article>
