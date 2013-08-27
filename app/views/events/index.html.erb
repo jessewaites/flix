@@ -1,7 +1,11 @@
-<h1><%= pluralize(@events.size, 'Event') %></h1>
+<%= render "layouts/navbar" %>
 
-<%= link_to "Add New Event", new_event_path %>
+<div class="span12">
+<h1><%= pluralize(@events.size, 'Event') %> Coming Soon.</h1>
+<%= link_to "Add New Event", new_event_path, class: "btn" %>
+</div>
 
+<div class="span12">
 <% @events.each do |event| %>
   <article>
     <header>
@@ -26,3 +30,5 @@
       </table>
   </article>
 <% end %>
+</div>
+<%= render "layouts/footer" %>

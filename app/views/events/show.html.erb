@@ -1,3 +1,6 @@
+<%= render "layouts/navbar" %>
+
+<div class="span12">
 <article>
     <header>
       <h2><%= @event.name %></h2>
@@ -19,5 +22,14 @@
       <p><%= format_price(@event) %></p>
 </article>
 
-<%= link_to "All Events", root_path %> |
-<%= link_to "Edit", edit_event_path(@event) %>
+<%= button_to "All Events", root_path, :method => :get %>
+<%= button_to "Edit", edit_event_path(@event), :method => :get %>
+<%= button_to "Delete", event_path(@event), method: :delete, data: {confirm: 'Are you sure?'} %>
+
+<a href="All Events" class="btn"><i class="icon-calendar"></i> <strong>Events</strong></a>
+<a href="#" class="btn"><i class="icon-edit"></i> <strong>Edit</strong></a>
+<a href="#" class="btn"><i class="icon-trash"></i> <strong>Delete</strong></a>
+
+</div>
+
+<%= render "layouts/footer" %>

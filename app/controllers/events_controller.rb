@@ -1,5 +1,9 @@
 class EventsController < ApplicationController
   def index
+    @events = Event.upcoming
+  end
+
+  def all
     @events = Event.all
   end
 
@@ -27,8 +31,16 @@ class EventsController < ApplicationController
   def create
     event_params = params.require(:event).
           permit(:name, :description, :location, :price, :starts_at)
-    @event = Event.new(params[:event])
+    @event = Event.new(event_params)
     @event.save
     redirect_to @event
   end
+
+  def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    redirect_to events_url
+  end
+
+
 end
