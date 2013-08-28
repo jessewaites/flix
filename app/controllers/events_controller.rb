@@ -30,7 +30,7 @@ class EventsController < ApplicationController
 
   def create
     event_params = params.require(:event).
-          permit(:name, :description, :location, :price, :starts_at)
+          permit(:name, :description, :location, :price, :starts_at, :image_file_name, :capacity)
     @event = Event.new(event_params)
     @event.save
     redirect_to @event
@@ -40,6 +40,13 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @event.destroy
     redirect_to events_url
+  end
+
+private
+
+  def event_params
+    params.require(:event).
+    permit(:name, :description, :location, :price, :starts_at, :image_file_name, :capacity)
   end
 
 
