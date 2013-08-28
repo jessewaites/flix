@@ -1,9 +1,13 @@
 <%= render "layouts/navbar" %>
 
-<div class="span12">
+<div class"row">
+
+<div class="span8">
+
 <article>
     <header>
       <h2><%= @event.name %></h2>
+      <h3><%= pluralize(@event.capacity, 'spot') %></h3>
     </header>
       <p>
         <%= @event.description %>
@@ -21,7 +25,15 @@
       <br>
       <p><%= format_price(@event) %></p>
 </article>
+</div>
 
+<div class="span4">
+  <%= image_for(@event) %>
+</div>
+</div>
+
+
+<div class ="span4">
 <%= button_to "All Events", root_path, :method => :get %>
 <%= button_to "Edit", edit_event_path(@event), :method => :get %>
 <%= button_to "Delete", event_path(@event), method: :delete, data: {confirm: 'Are you sure?'} %>
@@ -31,5 +43,7 @@
 <a href="#" class="btn"><i class="icon-trash"></i> <strong>Delete</strong></a>
 
 </div>
+
+
 
 <%= render "layouts/footer" %>
