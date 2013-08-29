@@ -21,7 +21,8 @@ class EventsController < ApplicationController
           permit(:name, :description, :location, :price, :starts_at)
 
     if @event.update(event_params)
-       redirect_to @event
+      flash[:notice] = "Event successfully updated!"
+      redirect_to @event
     else
     render :edit
     end

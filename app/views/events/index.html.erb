@@ -1,5 +1,3 @@
-<%= render "layouts/navbar" %>
-
 <div class="span8">
 <h1><%= pluralize(@events.size, 'Event') %> Coming Soon.</h1>
 <%= link_to "Add New Event", new_event_path, class: "btn" %>
@@ -34,4 +32,3 @@
   </article>
 <% end %>
 </div>
-<%= render "layouts/footer" %>
