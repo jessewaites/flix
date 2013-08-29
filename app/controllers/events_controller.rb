@@ -18,7 +18,7 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     event_params = params.require(:event).
-          permit(:name, :description, :location, :price, :starts_at)
+          permit(:name, :description, :location, :price, :starts_at, :image_file_name, :capacity)
 
     if @event.update(event_params)
       flash[:notice] = "Event successfully updated!"
