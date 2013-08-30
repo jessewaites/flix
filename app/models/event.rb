@@ -8,10 +8,12 @@ class Event < ActiveRecord::Base
 
   validates :capacity, numericality: {only_integer: true, greater_than: 0}
 
-  #validates :image_file_name, allow_blank: true, format: {
-   # with: /\w+\.(gif|jpg|png)\z/i,
-    #message: "Sorry, Must be a GIF, JPG, or PNG only."
- # }
+  validates :image_file_name, allow_blank: true, format: {
+    with: /\w+\.(gif|jpg|png)\z/i,
+    message: "Sorry, Must be a GIF, JPG, or PNG only."
+  }
+
+  has_many :registrations, dependent: :destroy
 
   def free?
     price.blank? || price == 0

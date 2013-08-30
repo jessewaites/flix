@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'bootstrap-sass-rails', '~> 2.3.2.1'
 
+gem 'font-awesome-sass-rails'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

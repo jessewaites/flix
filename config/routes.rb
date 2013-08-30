@@ -1,4 +1,6 @@
 Flix::Application.routes.draw do
+  resources :registrations
+
   resources :events
   root "events#index"
   # get "events" => "events#index"
