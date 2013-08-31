@@ -26,9 +26,11 @@
 
 
 <div>
-<%= button_to "All Events", root_path, :method => :get %>
-<%= button_to "Edit", edit_event_path(@event), :method => :get %>
-<%= button_to "Delete", event_path(@event), method: :delete, data: {confirm: 'Are you sure?'} %>
+<%= button_to "All Events", root_path, class: 'button', :method => :get %>
+<%= button_to "Edit", edit_event_path(@event), :class => 'button', :method => :get %>
+<%= button_to "Delete", event_path(@event), :class => 'button', method: :delete, data: {confirm: 'Are you sure?'} %>
 </div>
+
+
 
 
