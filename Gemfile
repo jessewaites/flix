@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'zurb-foundation'
 
-gem 'nsa_panel'
+gem 'high_voltage'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

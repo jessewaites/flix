@@ -5,8 +5,9 @@
 <ol>
   <% @registrations.each do |r| %>
   <li>
-    <%= mail_to(r.email, r.name) %>
-    (<%= r.how_heard %>)
+    <%= mail_to(r.email, r.name) %>,
+   who heard about the event through <%= r.how_heard %>.
+    <hr>
   </li>
   <% end %>
 </ol>
