@@ -1,6 +1,6 @@
-<div class"row">
-
-<div class="span8">
+<div>
+  <%= image_for(@event) %>
+</div>
 
 <article>
     <header>
@@ -23,21 +23,12 @@
       <br>
       <p><%= format_price(@event) %></p>
 </article>
-</div>
-
-<div class="span4">
-  <%= image_for(@event) %>
-</div>
-</div>
 
 
-<div class ="span4">
+<div>
 <%= button_to "All Events", root_path, :method => :get %>
 <%= button_to "Edit", edit_event_path(@event), :method => :get %>
 <%= button_to "Delete", event_path(@event), method: :delete, data: {confirm: 'Are you sure?'} %>
-
-<a href="All Events" class="btn"><i class="icon-calendar"></i> <strong>Events</strong></a>
-<a href="#" class="btn"><i class="icon-edit"></i> <strong>Edit</strong></a>
-<a href="#" class="btn"><i class="icon-trash"></i> <strong>Delete</strong></a>
-
 </div>
+
+

@@ -3,6 +3,10 @@ class EventsController < ApplicationController
     @events = Event.upcoming
   end
 
+  def name
+    @events = Event.name
+  end
+
   def all
     @events = Event.all
   end

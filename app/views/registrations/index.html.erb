@@ -1,8 +1,8 @@
-<header id= "content header">
-  <h1>Registrations for <%= link_to(@event.name, @event) %><h1>
+<header>
+  <h1>Registrations</h1>
 </header>
 
-<ol id= registrations>
+<ol>
   <% @registrations.each do |r| %>
   <li>
     <%= mail_to(r.email, r.name) %>
