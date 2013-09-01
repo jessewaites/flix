@@ -5,8 +5,9 @@
 <article>
     <header>
       <h2><%= @event.name %></h2>
-      <h3><%= pluralize(@event.capacity, 'spot') %></h3>
-      <h4><%= link_to "View Registrations", event_registrations_path(@event) %>
+      <h3><%= pluralize(@event.spots_left, 'spot')%> still available.</h3>
+      <!-- <h4><%= link_to "Register for this Event", new_event_registration_path(@event) %></h4> -->
+      <h4><%= register_link_for(@event) %></h4>
     </header>
       <p>
         <%= @event.description %>
@@ -29,7 +30,7 @@
 <div>
 <%= button_to "All Events", root_path, class: 'button', :method => :get %>
 <%= button_to "Edit", edit_event_path(@event), :class => 'button', :method => :get %>
-<%= button_to "Delete", event_path(@event), :class => 'button', method: :delete, data: {confirm: 'Are you sure?'} %>
+<%= button_to "Delete", event_path(@event), :class => 'primary button', method: :delete, data: {confirm: 'Are you sure?'} %>
 
 </div>
 

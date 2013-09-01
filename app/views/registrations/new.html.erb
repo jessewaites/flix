@@ -1,0 +1,26 @@
+<h1>Register for Event</h2>
+
+<%= form_for([@event, @registration]) do |f| %>
+<fieldset>
+  <ol>
+    <li>
+      <%= f.label :name %>
+      <%= f.text_field :name, size: 40, autofocus: true %>
+    </li>
+    <li>
+      <%= f.label :email %>
+      <%= f.text_field :email, size: 40, autofocus: true %>
+    </li>
+    <li>
+    <%= f.label :how_heard %>
+    <%= f.select :how_heard,
+                 Registration::HOW_HEARD_OPTIONS,
+                 prompt: "Please select one." %>
+    </li>
+  </ol>
+  <p>
+    <%= f.submit class: "button" %>
+    <%= link_to "Cancel", events_path, class: "button" %>
+  </p>
+</fieldset>
+<% end %>
