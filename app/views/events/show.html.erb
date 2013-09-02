@@ -5,12 +5,13 @@
 <article>
     <header>
       <h2><%= @event.name %></h2>
-      <h3><%= pluralize(@event.spots_left, 'spot')%> still available.</h3>
+      <!--<h3><%= pluralize(@event.spots_left, 'spot')%> still available.</h3>
       <!-- <h4><%= link_to "Register for this Event", new_event_registration_path(@event) %></h4> -->
       <h4><%= register_link_for(@event) %></h4>
     </header>
       <p>
         <%= @event.description %>
+        <h4><%= link_to "Show Registrations", event_registrations_path(@event) %></h4>
       </p>
       <hr>
       <strong>When:</strong>
