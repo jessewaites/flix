@@ -15,8 +15,6 @@ class Event < ActiveRecord::Base
 
   has_many :registrations, dependent: :destroy
 
-  has_attached_file :pic
-
   def free?
     price.blank? || price == 0
   end
