@@ -1,6 +1,8 @@
 Flix::Application.routes.draw do
 
 
+  get "info/contact"
+  get "info/about"
   resources :registrations
 
   root "events#index"
