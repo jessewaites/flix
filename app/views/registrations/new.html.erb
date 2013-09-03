@@ -18,9 +18,9 @@
                  prompt: "Please select one." %>
     </li>
   </ul>
-  <p>
-    <%= f.submit class: "button" %>
-    <%= link_to "Cancel", events_path, class: "small button success radius" %>
-  </p>
+    <ul-class "button-group">
+    <%= f.submit class: "small button" %>
+    <%= link_to "Cancel", events_path, class: "small button" %>
+  </ul>
 <!-- </fieldset> -->
 <% end %>

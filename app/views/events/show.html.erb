@@ -27,12 +27,12 @@
       <p><%= format_price(@event) %></p>
 </article>
 
-
 <div>
-<%= button_to "All Events", root_path, class: 'button', :method => :get %>
-<%= button_to "Edit", edit_event_path(@event), :class => 'button', :method => :get %>
-<%= button_to "Delete", event_path(@event), :class => 'primary button', method: :delete, data: {confirm: 'Are you sure?'} %>
-
+<ul-class "button-group">
+<%= link_to "See All Events", root_path, class: 'small button', :method => :get %>
+<%= link_to "Edit", edit_event_path(@event), :class => 'small button', :method => :get %>
+<%= link_to "Delete", event_path(@event), :class => 'small button', method: :delete, data: {confirm: 'Are you sure?'} %>
+</ul>
 </div>
 
 
