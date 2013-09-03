@@ -18,6 +18,7 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
+    <%= analytics_init if Rails.env.production? %>
   </head>
 
   <body>
@@ -49,7 +50,7 @@
 
     <h2 class="subheader">What Is This?</h2>
     <hr>
-    GeekSocial is a fully responsive demonstration Ruby on Rails app and event calendar for smart people. Site design and implementation by Jesse Waites in Rails 4.0, with Ruby v1.9.3, while under version control at GitHub. The front-end was built on the Foundation 4 framework. Typography comes courtesy of Google Fonts- Specifically, the 'Ubuntu' font for the headers and 'Dosis' for the body text. The color scheme was selected by my little sister and I. She was compensated for her consulting services with Ice cream.
+    GeekSocial is a fully responsive demonstration Ruby on Rails app and event calendar for smart people. Site design and implementation by Jesse Waites in Rails 4.0, with Ruby v1.9.3, while under version control at GitHub. The front-end was built on the Foundation 4 framework. Google Analytics is installed and reporting. Typography comes courtesy of Google Fonts- Specifically, the 'Ubuntu' font for the headers and 'Dosis' for the body text. The color scheme was selected by my little sister and I. She was compensated for her consulting services with Ice cream.
     <hr>
   </div>
 

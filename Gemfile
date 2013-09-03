@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'zurb-foundation'
 
-gem 'pages'
+gem 'google-analytics-rails'
 
 
 group :doc do
