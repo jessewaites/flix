@@ -4,7 +4,7 @@ Flix::Application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
-  GA.tracker = "UA-43688887-1"
+  #GA.tracker = "UA-43688887-1"
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both thread web servers
