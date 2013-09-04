@@ -18,7 +18,7 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
-    <%= analytics_init if Rails.env.production? %>
+
   </head>
 
   <body>
@@ -37,8 +37,6 @@
       <li><%= link_to "Add Event", new_event_path %></li>
       <li class="divider"></li>
       <li><%= link_to "Hire Me", info_contact_path %></li>
-      <li class="divider"></li>
-      <li><%= link_to "About", info_about_path %></li>
       <li class="divider"></li>
       <!-- <li><%= link_to "Sign In" %></li> -->
     </ul>
