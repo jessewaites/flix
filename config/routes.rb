@@ -1,6 +1,7 @@
 Flix::Application.routes.draw do
 
 
+  devise_for :users
   get "info/contact"
   get "info/about"
   resources :registrations
@@ -8,6 +9,6 @@ Flix::Application.routes.draw do
   root "events#index"
 
   resources :events do
-    resources :registrations
+  #   resources :registrations
   end
 end

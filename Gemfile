@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'zurb-foundation'
 
+gem 'devise'
+
 
 
 group :doc do
