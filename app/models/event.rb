@@ -2,7 +2,7 @@ class Event < ActiveRecord::Base
 
   validates :name, :location, presence: true
 
-  validates :description, length: {minimum: 25}
+  validates :description, length: {minimum: 2}
 
   validates :price, numericality: { greater_that_or_equal_to: 0}
 
