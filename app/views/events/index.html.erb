@@ -8,13 +8,12 @@
       <h2><%= link_to(event.name, event) %></h2>
       <%= image_for(event) %>
       <br>
-      <br>
-      <br>
-      <h4><%= register_link_for(event) %></h4>
     </header>
+      <br>
       <p>
         <%= truncate(event.description, length: 120, seperator: ' ') %>
       </p>
+      <h4><%= register_link_for(event) %></h4>
       <table>
         <tr>
           <th>When:</th>
@@ -29,7 +28,6 @@
           <td><%= format_price(event) %></td>
         </tr>
       </table>
-      <br>
       <hr>
   </article>
 <% end %>
