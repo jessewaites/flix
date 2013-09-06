@@ -10,3 +10,8 @@ hr {
 border-width: 5px 0 0;
 }
 
+bg {
+-webkit-background-size:cover;
+-moz-background-size:cover;
+background-size:cover;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap In Practice - Landing Page Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+
+    <link href="http://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600" rel="stylesheet" />
+
+    <style>
+
+        /* http://css-tricks.com/perfect-full-page-background-image/ */
+        html {
+            background: url(http://pnthr.com/wp-content/uploads/2013/09/geeksocial.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        body {
+            padding-top: 20px;
+            font-size: 16px;
+            font-family: "Open Sans",serif;
+            background: transparent;
+        }
+
+        h1 {
+            font-family: "Abel", Arial, sans-serif;
+            font-weight: 400;
+            font-size: 40px;
+        }
+
+        /* Override B3 .panel adding a subtly transparent background */
+        .panel {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .margin-base-vertical {
+            margin: 40px 0;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-offset-3 panel">
+                <div class="text-center">
+                <h1 class="margin-base-vertical">Welcome to GeekSocial.</h1>
+
+                <p>
+                    GeekSocial is a demo Ruby on Rails site from Jesse Waites.
+                </p>
+                <p>
+                    Have a look around, read the "About" page to learn about the technology stack, and create an account to register for an event or create an event yourself.
+                </p>
+
+                <p>
+                    Thanks for stopping by.
+                </p>
+                </div>
+
+                    <p class="text-center">
+                        <%= link_to "Enter GeekSocial", events_path, class: "btn btn-success btn-large" %>
+
+                    </p>
+                    </span>
+            </div><!-- //main content -->
+        </div><!-- //row -->
+    </div> <!-- //container -->
+
+</body>
+</html>

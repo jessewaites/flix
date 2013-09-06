@@ -4,4 +4,9 @@ class InfoController < ApplicationController
 
   def about
   end
+
+  def landing
+    render :layout => false
+  end
+
 end
