@@ -13,7 +13,7 @@
   <%= f.password_field :password_confirmation %></div>
 
   <div><%= f.submit "Sign up" %></div>
-  <%= button_to "Submit", new_user_registration_path, class: "button", :method => :post %>
+  <%= button_to "Submit", info_about_path, class: "button", :method => :get %>
 <% end %>
 
 <%= render "devise/shared/links" %>

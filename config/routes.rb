@@ -1,14 +1,15 @@
 Flix::Application.routes.draw do
 
 
-  devise_for :users
+
+  devise_for :users do get '/users/sign_out' => 'devise/sessions#destroy' end
   get "info/contact"
   get "info/about"
-  resources :registrations
+
 
   root "events#index"
 
   resources :events do
-  #   resources :registrations
+     resources :registrations
   end
 end
