@@ -7,7 +7,10 @@
     <header>
       <h2><%= link_to(event.name, event) %></h2>
       <%= image_for(event) %>
-      <h3><%= pluralize(event.spots_left, 'spot') %> still available.</h3>
+      <br>
+      <br>
+      <br>
+      <h4><%= register_link_for(event) %></h4>
     </header>
       <p>
         <%= truncate(event.description, length: 120, seperator: ' ') %>

@@ -14,4 +14,5 @@ module EventsHelper
     image_tag event.image_file_name
     end
   end
+
 end

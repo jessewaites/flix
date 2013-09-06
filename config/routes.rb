@@ -6,6 +6,7 @@ Flix::Application.routes.draw do
   get "info/contact"
   get "info/about"
   get "info/landing"
+  get "info/test"
 
 
   root "info#landing"
