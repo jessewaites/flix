@@ -88,5 +88,14 @@
 
     <link href='http://fonts.googleapis.com/css?family=Dosis:400,500|Ubuntu' rel='stylesheet' type='text/css'>
     <%= javascript_include_tag "application" %>
+    <script src="/js/foundation.min.js"></script>
+    <script>
+  document.write('<script src=/js/vendor/'
+    + ('__proto__' in {} ? 'zepto' : 'jquery')
+    + '.js><\/script>');
+</script>
+<script>
+  $(document).foundation();
+</script>
   </body>
 </html>
