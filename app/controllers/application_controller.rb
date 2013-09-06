@@ -4,4 +4,15 @@ class ApplicationController < ActionController::Base
   before_filter :authenticate_user!, except: [:index, :contact, :about, :landing]
 
   protect_from_forgery with: :exception
+
+  def after_sign_out_path_for(user)
+    events_path
+  end
+
+  def after_sign_in_path_for(user)
+    events_path
+  end
+
+
 end
+
