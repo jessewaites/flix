@@ -1,9 +1,4 @@
-<!-- <!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+
   <head>
     <meta charset="utf-8" />
 
@@ -56,7 +51,9 @@
        <p class="alert"><%= alert %></p>
     <%= yield %></div>
   <div class="large-4 columns"><br>
-
+    <% if user_signed_in? %>
+        Logged in as: <%= current_user.email %>
+        <% end %>
     <h2 class="subheader">What Is This?</h2>
     <hr>
     GeekSocial is a fully responsive demonstration Ruby on Rails app and event calendar for smart people. GeekSocial features complete user authentication functionality via the Devise gem. Site design and implementation by Jesse Waites in Rails 4.0, with Ruby v1.9.3, while under version control at GitHub. The front-end was built on the Foundation 4 framework. Google Analytics is installed and reporting. Typography comes courtesy of Google Fonts- Specifically, the 'Ubuntu' font for the headers and 'Dosis' for the body text. The color scheme was selected by my little sister and I. She was compensated for her consulting services with Ice cream.
