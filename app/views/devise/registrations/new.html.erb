@@ -1,5 +1,9 @@
 <h2>Sign up</h2>
 
+<p>To show off the authentication system, I chose to block off certain parts of the website unless a user is signed in. Simply create an account with any name and any email address and you'll be on your way.</p>
+
+<p>The "About" page and "Hire Me" pages can be seen without logging in, for what it's worth.</p>
+
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
