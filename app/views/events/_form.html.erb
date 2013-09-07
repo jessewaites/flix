@@ -28,9 +28,7 @@
    <%= f.label :capacity, title: "Enter Your Information", data: {tooltip: true} %><br/>
    <%= f.number_field :capacity %>
   </p>
-   <p>
-    <row>
+    <ul-class "button-group">
     <%= f.submit 'Add Event', :class => 'button' %>
-    <%= button_to "Cancel", events_path, class: "button", :method => :get %></row>
-  </p>
+    <%= link_to "Cancel", events_path, class: "button", :method => :get %></ul>
 <% end %>

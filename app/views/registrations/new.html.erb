@@ -2,25 +2,26 @@
 
 <%= form_for([@event, @registration]) do |f| %>
 <!-- <fieldset> -->
-  <ul>
-    <li>
+<h4><%= link_to "Show Registrations", event_registrations_path(@event) %></h4>
+    <p>
       <%= f.label :name %>
       <%= f.text_field :name, size: 40, autofocus: true %>
-    </li>
-    <li>
+    </p>
+    <p>
       <%= f.label :email %>
       <%= f.text_field :email, size: 40, autofocus: true %>
-    </li>
-    <li>
+    </p>
+    <p>
     <%= f.label :How_you_heard_about_the_Event %>
     <%= f.select :how_heard,
                  Registration::HOW_HEARD_OPTIONS,
                  prompt: "Please select one." %>
-    </li>
-  </ul>
+    </p>
+  </p>
     <ul-class "button-group">
     <%= f.submit class: "small button" %>
     <%= link_to "Cancel", events_path, class: "small button" %>
   </ul>
+  </p>
 <!-- </fieldset> -->
 <% end %>
