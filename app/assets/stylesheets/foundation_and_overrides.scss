@@ -1,6 +1,6 @@
 // Required global settings and mixins for Foundation
 @import "foundation/foundation-global";
-//@import url(//fonts.googleapis.com/css?family=Dosis|Ubuntu);
+@import url(//fonts.googleapis.com/css?family=Dosis|Ubuntu);
 
 // Settings file to override Foundation variables
 
@@ -248,7 +248,7 @@ $anchor-font-color: #5673b0;
 // We use this to control the display property.
 // $button-display: inline-block;
 // $button-margin-bottom: emCalc(20px);
-$img: left;
+
 // We use these to control button text styles.
 // $button-font-family: inherit;
 // $button-font-color: #fff;
