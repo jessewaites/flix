@@ -1,0 +1,51 @@
+
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- Uncomment to make IE8 render like IE7 -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Demo Ruby on Rails 4 site" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= csrf_meta_tags %>
+
+  </head>
+
+  <body>
+    <div class="contain-to-grid sticky">
+    <nav class="top-bar">
+  <ul class="title-area">
+    <li class="name", "toggle-topbar menu-icon">
+      <h1><%= link_to "GeekSocial", events_path %></a></h1>
+    </li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+      <li><%= link_to "Browse Events", events_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Add Event", new_event_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Hire Me", info_contact_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "About", info_about_path %></li>
+      <li class="divider"></li>
+      <li class="has-dropdown"><a href="#">Account</a>
+          <ul class="dropdown">
+          <li class="has-dropdown"><%= link_to "Sign Up", new_user_registration_path %>
+          <li class="has-dropdown"><%= link_to "Sign In", new_user_session_path %>
+          <li class="has-dropdown"><%= link_to "Sign Out", destroy_user_session_path %>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+<div class="row">
+  <div class="large-8 columns">
+<p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
