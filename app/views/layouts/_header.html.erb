@@ -11,7 +11,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "Demo Ruby on Rails 4 site" %></title>
 
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/custom.modernizr" %>
+    <script src="/js/custom.modernizr.js"></script>
     <%= csrf_meta_tags %>
 
   </head>
