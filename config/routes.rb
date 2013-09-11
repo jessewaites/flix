@@ -10,6 +10,7 @@ Flix::Application.routes.draw do
 
   root "info#landing"
 
+
   resources :events do
      resources :registrations
   end

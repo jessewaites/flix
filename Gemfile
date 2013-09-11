@@ -38,8 +38,6 @@ gem 'zurb-foundation'
 
 gem 'devise'
 
-gem 'activeadmin', github: 'gregbell/active_admin', branch: 'rails4'
-
 
 
 
