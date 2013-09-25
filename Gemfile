@@ -38,6 +38,12 @@ gem 'zurb-foundation'
 
 gem 'devise'
 
+gem 'omniauth-twitter'
+
+gem 'omniauth'
+
+gem 'oauth2'
+
 
 
 
